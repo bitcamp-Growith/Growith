@@ -40,5 +40,4 @@ public interface FriendsService {
 
     void deleteGestureCategory(); // 제스쳐 카테고리 삭제하기
 
-
 }
