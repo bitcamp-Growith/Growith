@@ -25,7 +25,7 @@ public class Schedule {
     @Column private String toDo;
     @Column private LocalDate date;
     @Column private LocalTime time;
-    @Column private LocalDateTime registTime; //등록시간
+    @Column private LocalDateTime uploadTime; //등록시간
     @Column private int importance; //중요도
     @Column private boolean check; //완료 미완료 여부 체크
 }
