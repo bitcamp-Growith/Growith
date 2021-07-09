@@ -19,7 +19,7 @@ public class ActivityInfo{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column
-    private Long people; // 접근한 인원
+    private Long id; // 활동ID
 
     @Column    private String userId; // 친구 아이디
     @Column    private Boolean takeTodo; // 일정 가져감 유무
