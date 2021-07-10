@@ -10,11 +10,11 @@ import java.time.LocalTime;
 public class ScheduleDto {
     private Long scheduleId;
     private Long userId;
-    private String scheduleTag;
+    private Long TagId;
     private String toDo;
     private LocalDate date;
     private LocalTime time;
     private LocalDateTime uploadTime;
     private int importance;
-    private boolean check;
+    private int complete;
 }

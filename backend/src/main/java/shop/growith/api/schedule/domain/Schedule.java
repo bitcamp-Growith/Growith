@@ -4,6 +4,8 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import shop.growith.api.User.domain.User;
+import shop.growith.api.scheduleTag.domain.ScheduleTag;
 
 import javax.persistence.*;
 import java.time.LocalDate;
@@ -19,13 +21,17 @@ import java.time.LocalTime;
 public class Schedule {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column private Long scheduleId;
-    @Column private Long userId;
-    @Column private String scheduleTag;
+    @Column private long scheduleId;
+    @Column private long userId;
+//    @Column private long tagId;
     @Column private String toDo;
     @Column private LocalDate date;
     @Column private LocalTime time;
-    @Column private LocalDateTime uploadTime; //등록시간
-    @Column private int importance; //중요도
-    @Column private boolean check; //완료 미완료 여부 체크
+    @Column private LocalDateTime uploadTime;
+    @Column private int importance;
+    @Column private int complete;
+
+    @ManyToOne
+    @JoinColumn(name = "tag_id")
+    private ScheduleTag scheduleTag;
 }
