@@ -1,6 +1,9 @@
-package shop.growith.api.Cam.domain;
+package shop.growith.api.camroom.domain;
 
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
@@ -17,8 +20,8 @@ public class CamRoom {
     @Column
     private Long id;
 
-    @Column    private String masterID;
-    @Column    private String memberID;
+    @Column    private String masterId;
+    @Column    private String userId;
     @Column    private LocalDateTime startDate;
     @Column    private LocalDateTime endDate;
     @Column    private String roomTitle;

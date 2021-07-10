@@ -1,6 +1,4 @@
-package shop.growith.api.Cam.service;
-
-import shop.growith.api.Cam.domain.CamMedia;
+package shop.growith.api.cammedia.service;
 
 public interface CamMediaService {
 

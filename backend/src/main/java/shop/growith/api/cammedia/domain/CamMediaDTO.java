@@ -1,4 +1,4 @@
-package shop.growith.api.Cam.domain;
+package shop.growith.api.cammedia.domain;
 
 
 import lombok.Data;

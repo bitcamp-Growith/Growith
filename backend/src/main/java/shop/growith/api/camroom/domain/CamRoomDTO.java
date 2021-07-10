@@ -1,8 +1,6 @@
-package shop.growith.api.Cam.domain;
+package shop.growith.api.camroom.domain;
 
 import lombok.Data;
-
-
 
 import java.time.LocalDateTime;
 
@@ -13,8 +11,8 @@ public class CamRoomDTO {
     private Long id;
 
 
-    private String masterID;
-    private String memberID;
+    private String masterId;
+    private String memberId;
     private LocalDateTime startDate;
     private LocalDateTime endDate;
     private String roomTitle;
