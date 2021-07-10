@@ -1,9 +1,18 @@
 package shop.growith.api.cammedia.service;
 
-public interface CamMediaService {
 
-    void saveMedia();    //기기에 파일 저장
-    void modifyMedia(); //파일 편집 또는 수정
-    void removeMedia(); //파일 삭제
-    void shareMedia(); //파일 공유
+import shop.growith.api.cammedia.domain.CamMedia;
+
+import java.util.List;
+
+public interface CamMediaService {
+    void saveCamMedia(CamMedia camMedia);
+    List<CamMedia> findAll();
+    void existsById(long camMediaId);
+    int count();
+    Optional<CamMedia> findById(long camMediaId);
+    CamMedia getById(long camMediaId);
+    void deleteById(long camMediaId);
+
+
 }

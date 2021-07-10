@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import shop.growith.api.camroom.domain.CamRoom;
 
 import javax.persistence.*;
 
@@ -25,5 +26,8 @@ public class CamMedia {
     @Column    private String saveMediaPath; //파일위치(주소)
     @Column    private String saveMediaSize; //파일크기
 
+    @OneToOne
+    @JoinColumn(name = "cam_room_id")
+    private CamRoom cam_room;
 }
 //cam_media에는 녹화본이 저장된다.

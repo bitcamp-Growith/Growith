@@ -8,4 +8,5 @@ public interface CamRoomService {
     void removeRoom (); // 방삭제
 
     void chatRoom (); // 대화기능
+
 }
