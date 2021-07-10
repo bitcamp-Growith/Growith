@@ -5,7 +5,7 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class MissionReplyDTO {
+public class ReplyDTO {
 
     private Long id;
 

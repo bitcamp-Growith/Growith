@@ -7,7 +7,7 @@ import java.time.LocalDateTime;
 
 @Getter
 @Setter
-public class MissionContentDTO {
+public class PostDTO {
 
     private Long id;
 

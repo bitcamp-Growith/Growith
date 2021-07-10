@@ -7,17 +7,18 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Entity
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-@Table(name ="mission_content")
-public class MissionContent {
+public class Post {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name="mission_post_id")
     private Long id;
 
     private String userName;
@@ -27,6 +28,13 @@ public class MissionContent {
     private String content;
 
     private String imgPath;
-    private int like;
+    private int postLike;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "mission_id")
+    private Mission mission;
+
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "post")
+    private List<Reply> replyList;
 
 }

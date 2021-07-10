@@ -7,6 +7,8 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Getter
@@ -17,6 +19,7 @@ public class Mission {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "mission_id")
     private Long id;
 
     private String masterId;
@@ -32,8 +35,10 @@ public class Mission {
     private int max_Times;
 
     @Enumerated(EnumType.STRING)
-    private CheckLevel check;
+    private CheckLevel checkLevel;
 
+    @OneToMany(mappedBy = "mission", cascade = CascadeType.ALL)
+    private List<Post> postList = new ArrayList<>();
 
 
 }

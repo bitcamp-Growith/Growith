@@ -13,18 +13,20 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-@Table(name="mission_reply")
-public class MissionReply {
+public class Reply {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "mission_reply_id")
     private Long id;
 
-    private Long missionContent_Id;
 
     private String user_Id;
     private String content;
     private LocalDateTime writeTime;
 
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "mission_post_id")
+    private Post post;
 
 }
