@@ -15,11 +15,11 @@ import java.time.LocalTime;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "schedule")
+@Table(name = "schedules")
 public class Schedule {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column private Long id;
+    @Column private Long scheduleId;
     @Column private Long userId;
     @Column private String scheduleTag;
     @Column private String toDo;

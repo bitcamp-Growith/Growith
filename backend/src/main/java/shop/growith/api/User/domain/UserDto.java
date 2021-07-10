@@ -7,10 +7,10 @@ import java.time.LocalDate;
 
 @Data
 public class UserDto {
-    private Long id;
-    private String userId;
+    private Long userId;
+    private String userName;
     private String userPw;
-    private String nickname;
+    private String userEmail;
     private String img;
     private String comment;
     private String name;

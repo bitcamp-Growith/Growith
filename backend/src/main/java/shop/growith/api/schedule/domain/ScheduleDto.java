@@ -8,7 +8,7 @@ import java.time.LocalTime;
 
 @Data
 public class ScheduleDto {
-    private Long id;
+    private Long scheduleId;
     private Long userId;
     private String scheduleTag;
     private String toDo;

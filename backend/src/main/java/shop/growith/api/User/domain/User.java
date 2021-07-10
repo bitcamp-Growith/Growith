@@ -17,10 +17,10 @@ import java.time.LocalDate;
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column private Long id;
-    @Column private String userId;
+    @Column private Long userid;
+    @Column private String userName;
     @Column private String userPw;
-    @Column private String nickname;//별명
+    @Column private String userEmail;//이메일
     @Column private String img;//자기소개 사진
     @Column private String comment;//자기소개 한마디
     @Column private String name;
