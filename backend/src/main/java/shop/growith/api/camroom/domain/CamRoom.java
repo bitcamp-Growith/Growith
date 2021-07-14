@@ -19,13 +19,13 @@ public class CamRoom {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column
-    private Long id;
+    private Long camRoomId;
 
-    @Column    private String masterId;
-    @Column    private String userId;
-    @Column    private LocalDateTime startDate;
-    @Column    private LocalDateTime endDate;
-    @Column    private String roomTitle;
+    @Column    private String masterName;       // 방장이름
+    @Column    private String memberName;       // 방 멤버이름
+    @Column    private LocalDateTime startDate; // 방 개설날짜
+    @Column    private LocalDateTime endDate;   // 방 사라진날짜
+    @Column    private String roomTitle;        // 방 제목
 
     @OneToOne(mappedBy = "cam_room")
     private CamMedia cam_media;

@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 import shop.growith.api.camroom.domain.CamRoom;
 
 import javax.persistence.*;
+import java.time.LocalDateTime;
 
 
 @Entity
@@ -18,13 +19,13 @@ import javax.persistence.*;
 public class CamMedia {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column
-    private Long id;
+    @Column    private Long camMediaId;
 
-    @Column    private int saveMediaNo; //파일등록번호
+    @Column    private Long saveMediaNo; //파일등록번호
     @Column    private String saveMediaName; //파일명
     @Column    private String saveMediaPath; //파일위치(주소)
-    @Column    private String saveMediaSize; //파일크기
+    @Column    private String saveMediaSize; //파일크기(용량)
+    @Column    private LocalDateTime saveMediaDate; //파일날짜
 
     @OneToOne
     @JoinColumn(name = "cam_room_id")

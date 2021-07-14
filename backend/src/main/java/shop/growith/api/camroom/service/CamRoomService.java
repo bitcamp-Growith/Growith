@@ -1,12 +1,18 @@
 package shop.growith.api.camroom.service;
 
+
+import shop.growith.api.camroom.domain.CamRoom;
+
+import java.util.List;
+import java.util.Optional;
+
 public interface CamRoomService {
-
-    void createRoom (); // 방생성
-    void viewRoom (); // 방조회
-    void modifyRoom (); // 방수정
-    void removeRoom (); // 방삭제
-
-    void chatRoom (); // 대화기능
+    void saveCamRoom(CamRoom camRoom);
+    List<CamRoom> findAll();
+    void existsById(long camRoomId);
+    int count();
+    Optional<CamRoom> findById(long camRoomId);
+    CamRoom getById(long camRoomId);
+    void deleteById(long camRoomId);
 
 }
