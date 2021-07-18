@@ -25,4 +25,14 @@ public class GestureCategory {
     @ManyToOne
     @JoinColumn(name="activity_id", insertable = false, updatable = false)
     private ActivityInfo activityInfo;
+
+    //friendsList와 연결(유경혜)
+    @ManyToOne
+    @JoinColumn(name = "friends_id")
+    private FriendsList friendsList;
+
+    //schedule과 연결(유경혜)
+    @ManyToOne
+    @JoinColumn(name = "schedule_id")
+    private Schedule schedule;
 }

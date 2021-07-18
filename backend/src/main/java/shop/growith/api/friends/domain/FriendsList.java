@@ -29,4 +29,18 @@ public class FriendsList{
     @JoinColumn(name = "activity_id")
     private ActivityInfo activityInfo;
 
+    //users 테이블과 연결(유경혜)
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    private User user;
+
+    //mission과 연결(유경혜)
+    @OneToMany(mappedBy = "friendsList")
+    private List<Mission> missionList = new ArrayList<>();
+
+    //gestureCategory와 연결(유경혜)
+    @OneToMany(mappedBy = "friendsList")
+    private List<GestureCategory> gestureCategoryList = new ArrayList<>();
+
+
 }

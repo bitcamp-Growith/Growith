@@ -23,7 +23,6 @@ public class Schedule {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column private long scheduleId;
     @Column private long userId;
-//    @Column private long tagId;
     @Column private String toDo;
     @Column private LocalDate date;
     @Column private LocalTime time;
@@ -34,4 +33,7 @@ public class Schedule {
     @ManyToOne
     @JoinColumn(name = "tag_id")
     private ScheduleTag scheduleTag;
+
+    @OneToMany(mappedBy = "schedule")
+    private List<GestureCategory> gestureCategoryList = new ArrayList<>();
 }

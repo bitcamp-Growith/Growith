@@ -20,19 +20,24 @@ import java.util.List;
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column private long userId;
-    @Column private String userName;
+    @Column private long userId;//테이블 아이디
+    @Column private String userName;//계정 아이디
     @Column private String userPw;
     @Column private String userEmail;//이메일
     @Column private String img;//자기소개 사진
     @Column private String comment;//자기소개 한마디
-    @Column private String name;
+    @Column private String name;//이름, 닉네임
     @Column private String gender;
     @Column private String local;
     @Column private LocalDate birth;
 
-    @OneToMany(mappedBy = "user")//인스턴스 이름
-    private List<ScheduleTag> scheduleTags = new ArrayList<>();
+    @OneToMany(mappedBy = "user")
+    private List<ScheduleTag> scheduleTagList = new ArrayList<>();
 
+    @OneToMany(mappedBy = "user")
+    private List<FriendsList> friendsListList = new ArrayList<>();
+
+    @OneToMany(mappedBy = "user")
+    private List<Mission> missionList = new ArrayList<>();
 
 }

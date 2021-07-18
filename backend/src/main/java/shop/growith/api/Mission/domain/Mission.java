@@ -40,5 +40,18 @@ public class Mission {
     @OneToMany(mappedBy = "mission", cascade = CascadeType.ALL)
     private List<Post> postList = new ArrayList<>();
 
+    //cam_room 테이블과 연결(유경혜)
+    @OneToMany(mappedBy = "mission")
+    private List<CamRoom> CamRooms = new ArrayList<>();
+
+    //users 테이블과 연결(유경혜)
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    private User user;
+
+    //friendsList랑 연결(유경혜)
+    @ManyToOne
+    @JoinColumn(name = "friends_id")
+    private FriendsList friendsList;
 
 }

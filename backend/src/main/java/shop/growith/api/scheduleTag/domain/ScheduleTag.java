@@ -27,8 +27,8 @@ public class ScheduleTag {
     @JoinColumn(name = "user_id")
     private User user;
 
-//    @OneToMany(mappedBy = "schedule")//인스턴스 이름
-//    private List<Schedule> schedule = new ArrayList<>();
+    @OneToMany(mappedBy = "tag")
+    private List<Schedule> scheduleList = new ArrayList<>();
 
 
 }

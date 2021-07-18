@@ -30,4 +30,9 @@ public class CamRoom {
     @OneToOne(mappedBy = "cam_room")
     private CamMedia cam_media;
 
+    //mission 테이블과 연결(유경혜)
+    @ManyToOne
+    @JoinColumn(name = "mission_id")
+    private Mission mission;
+
 }
