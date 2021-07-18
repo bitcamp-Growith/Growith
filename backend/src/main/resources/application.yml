@@ -3,7 +3,11 @@ spring:
     url: jdbc:mariadb://localhost:3306/growith
     driver-class-name: org.mariadb.jdbc.Driver
     username: root
+<<<<<<< HEAD
     password: 123456
+=======
+    password: root
+>>>>>>> 9d5f4901d6b248ff4b4e8bcacf505a9d03ea447c
 
   jpa:
     open-in-view: false
